@@ -16,10 +16,10 @@ function Projects() {
               <table className="min-w-max w-full table-auto">
                 <thead>
                   <tr className="bg-black text-white uppercase text-[10px] md:text-sm leading-normal">
-                    <th className="py-3 px-2 md:px-6 text-left">Project</th>
-                    <th className="py-3 px-2 md:px-6 text-left">Client</th>
+                    <th className="py-3 px-2 md:px-6 text-left">Projetos</th>
+                    <th className="py-3 px-2 md:px-6 text-left">Clientes</th>
                     <th className="py-3 px-2 md:px-6 text-left">Status</th>
-                    <th className="py-3 px-2 md:px-6 text-left">Actions</th>
+                    <th className="py-3 px-2 md:px-6 text-left">Ações</th>
                   </tr>
                 </thead>
                 <tbody className="text-black text-sm font-light">

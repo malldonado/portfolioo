@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from "../../components/site/navbar/navbar";
 import Footer from "../../components/site/footer/footer";
-import Project from "../../components/panel/project/project";
+import Project from "../../components/site/project/project";
 import HashLoader from 'react-spinners/HashLoader';
 
 function ProjectPage() {

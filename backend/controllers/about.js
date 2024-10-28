@@ -1,4 +1,4 @@
-const aboutData = require('../models/AboutData');
+const AboutData = require('../models/AboutData'); // Ajuste o caminho conforme necessário
 const fs = require('fs');
 const path = require('path');
 
@@ -7,27 +7,10 @@ exports.updateAboutData = async (req, res) => {
     const { title, text } = req.body;
     const file = req.file ? req.file.filename : null;
 
-    const lastData = await aboutData.findOne().sort({ _id: -1 }).limit(1);
-
-    let lastImage = null;
-    if (lastData && lastData.file) {
-      lastImage = lastData.file;
-    }
-
-    const updatedData = await aboutData.findOneAndUpdate({}, {
-      title: title,
-      text: text,
-      file: file
-    }, { new: true });
+    const { lastImage, updatedData } = await updateData({ title, text, file });
 
     if (lastImage) {
-      fs.unlink(path.join(__dirname, '../uploads/', lastImage), (err) => {
-        if (err) {
-          console.error('Erro ao remover a última imagem:', err);
-        } else {
-          console.log('Última imagem removida com sucesso:', lastImage);
-        }
-      });
+      removeLastImage(lastImage);
     }
 
     if (!updatedData) {
@@ -36,21 +19,78 @@ exports.updateAboutData = async (req, res) => {
 
     res.status(200).json({ message: 'Data updated successfully!', data: updatedData });
   } catch (error) {
-    console.error('Error updating data:', error);
-    res.status(500).json({ error: 'An error occurred during processing' });
+    handleError(res, error, 'Error updating data');
+  }
+};
+
+exports.createAboutData = async (req, res) => {
+  try {
+    const { title, text } = req.body;
+    const file = req.file ? req.file.filename : null;
+
+    const { lastImage, updatedData } = await createOrUpdateData({ title, text, file });
+
+    if (lastImage) {
+      removeLastImage(lastImage);
+    }
+
+    res.status(200).json({ message: 'Data created or updated successfully!', data: updatedData });
+  } catch (error) {
+    handleError(res, error, 'Error creating or updating data');
   }
 };
 
 exports.getAboutLastData = async (req, res) => {
   try {
-    const latestData = await aboutData.findOne().sort({ _id: -1 }).limit(1);
+    const latestData = await AboutData.findOne().sort({ _id: -1 });
 
     if (!latestData) {
       return res.status(404).json({ message: 'No data found' });
     }
+
     res.status(200).json(latestData);
   } catch (error) {
-    console.error('Error fetching latest data:', error);
-    res.status(500).json({ error: 'An error occurred while fetching data' });
+    handleError(res, error, 'Error fetching latest data');
   }
-}
+};
+
+const updateData = async ({ title, text, file }) => {
+  const lastData = await AboutData.findOne().sort({ _id: -1 });
+  const lastImage = lastData?.file || null;
+
+  const updatedData = await AboutData.findOneAndUpdate(
+    {},
+    { title, text, file },
+    { new: true }
+  );
+
+  return { lastImage, updatedData };
+};
+
+const createOrUpdateData = async ({ title, text, file }) => {
+  const lastData = await AboutData.findOne().sort({ _id: -1 });
+  const lastImage = lastData?.file || null;
+
+  const updatedData = await AboutData.findOneAndUpdate(
+    {},
+    { title, text, file },
+    { new: true, upsert: true }
+  );
+
+  return { lastImage, updatedData };
+};
+
+const removeLastImage = (imageName) => {
+  fs.unlink(path.join(__dirname, '../uploads/', imageName), (err) => {
+    if (err) {
+      console.error('Error removing the last image:', err);
+    } else {
+      console.log('Last image removed successfully:', imageName);
+    }
+  });
+};
+
+const handleError = (res, error, customMessage) => {
+  console.error(customMessage, error);
+  res.status(500).json({ error: 'An error occurred while processing the request' });
+};

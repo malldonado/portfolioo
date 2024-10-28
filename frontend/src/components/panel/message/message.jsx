@@ -24,11 +24,11 @@ function Message() {
                 {/* Table Header */}
                 <thead>
                   <tr className="bg-black text-white uppercase text-[10px] md:text-sm leading-normal">
-                    <th className="py-3 px-2 md:px-6 text-left">Date</th>
-                    <th className="py-3 px-2 md:px-6 text-left">Name</th>
+                    <th className="py-3 px-2 md:px-6 text-left">Data</th>
+                    <th className="py-3 px-2 md:px-6 text-left">Nome</th>
                     <th className="py-3 px-2 md:px-6 text-left">Email</th>
-                    <th className="py-3 px-2 md:px-6 text-left">Phone</th>
-                    <th className="py-3 px-2 md:px-6 text-left">Actions</th>
+                    <th className="py-3 px-2 md:px-6 text-left">Telefone</th>
+                    <th className="py-3 px-2 md:px-6 text-left">Ações</th>
                   </tr>
                 </thead>
                 {/* Table Body */}
@@ -105,11 +105,11 @@ function Message() {
       {popupOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
           <div className="bg-white p-4 rounded-md relative w-[500px]">
-            <h2 className="text-lg font-bold mb-4">Contact Details</h2>
-            <p>Name: {selectedContact.name}</p>
+            <h2 className="text-lg font-bold mb-4">Detalhes do Contato</h2>
+            <p>Nome: {selectedContact.name}</p>
             <p>Email: {selectedContact.email}</p>
-            <p>Phone: {selectedContact.phone}</p>
-            <p>Message: {selectedContact.message}</p>
+            <p>Telefone: {selectedContact.phone}</p>
+            <p>Mensagem: {selectedContact.message}</p>
             <IoCloseSharp
               className="absolute text-[25px] top-[15px] right-3 text-black cursor-pointer"
               onClick={closePopup}

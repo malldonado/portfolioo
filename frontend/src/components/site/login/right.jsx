@@ -1,4 +1,3 @@
-import Logo from "../../../images/logo_login.png";
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import useLogin from "../../../hooks/site/useLogin";
@@ -11,10 +10,10 @@ function Right() {
         <IoCloseSharp className="absolute text-[45px] top-5 right-5 text-black cursor-pointer" />
       </Link>
       <div className="flex flex-col items-center justify-center h-screen">
-        <Link to="/">
-          <img src={Logo} className="h-[40px] mt-8 cursor-pointer" alt="" />
+        <Link className="overflow-hidden" to="/">
+          <span className="text-black text-4xl">malldonado</span>
         </Link>
-        <div className="mt-10 md:w-[50%] px-4 md:px-0">
+        <div className="mt-10 2xl:w-[60%] px-4 md:px-0 w-[50%] overflow-hidden">
           <h2 className="text-[26px] font-bold nunito-font">Login</h2>
           <p className="nunito-font text-[14px] mt-4 text-gray-500">
             Entre com os dados que você forneceu durante o seu cadastro.

@@ -21,7 +21,7 @@ function Post() {
       >
         <div className="sm:col-span-6 mt-1">
           <label className="block text-sm font-medium leading-6 text-gray-900">
-            Banner title
+            Título do Banner
           </label>
           <div className="mt-2">
             <div className="flex rounded-md w-full shadow-sm ring-1 ring-inset ring-gray-300 bg-white outline-none px-2">

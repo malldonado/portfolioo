@@ -20,7 +20,7 @@ function Banner() {
                 {aboutData.title}
               </h1>
               <br />
-              {renderParagraphs(aboutData.text)}
+              <span className="text-xl">{renderParagraphs(aboutData.text)}</span>
             </>
           ) : (
             <p>Loading...</p>

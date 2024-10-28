@@ -34,7 +34,7 @@ function Settings() {
                 htmlFor="password"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Password
+                Senha
               </label>
               <div className="mt-2">
                 <input
@@ -55,7 +55,7 @@ function Settings() {
                 htmlFor="first-name"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                First name
+                Primeiro Nome
               </label>
               <div className="mt-2">
                 <input
@@ -76,7 +76,7 @@ function Settings() {
                 htmlFor="last-name"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Last name
+                Sobrenome
               </label>
               <div className="mt-2">
                 <input
@@ -97,7 +97,7 @@ function Settings() {
                 htmlFor="phone"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Phone
+                Telefone
               </label>
               <div className="mt-2">
                 <div className="flex rounded-md w-full shadow-sm ring-1 ring-inset ring-gray-300 bg-white outline-none px-2">
@@ -115,91 +115,7 @@ function Settings() {
                 </div>
               </div>
             </div>
-            <div className="sm:col-span-4">
-              <label
-                htmlFor="street-address"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Street address
-              </label>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  name="streetAddress"
-                  id="street-address"
-                  value={formData.streetAddress}
-                  onChange={handleChange}
-                  autoComplete="street-address"
-                  placeholder="Endereço"
-                  className="block w-full pl-3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none font-medium"
-                  required
-                />
-              </div>
-            </div>
-            <div className="sm:col-span-2">
-              <label
-                htmlFor="postal-code"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                ZIP / Postal code
-              </label>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  name="postalCode"
-                  id="postal-code"
-                  value={formData.postalCode}
-                  onChange={handleChange}
-                  autoComplete="postal-code"
-                  placeholder="12345-678"
-                  className="block w-full rounded-md border-0 py-1.5 pl-3 outline-none text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 font-medium"
-                  required
-                />
-              </div>
-            </div>
             <div className="sm:col-span-3">
-              <label
-                htmlFor="city"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                City
-              </label>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  name="city"
-                  id="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                  autoComplete="address-level2"
-                  placeholder="Cidade"
-                  className="block w-full rounded-md border-0 py-1.5 pl-3 outline-none text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 font-medium"
-                  required
-                />
-              </div>
-            </div>
-            <div className="sm:col-span-3">
-              <label
-                htmlFor="region"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                State
-              </label>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  name="region"
-                  id="region"
-                  value={formData.region}
-                  onChange={handleChange}
-                  autoComplete="address-level1"
-                  placeholder="Estado"
-                  className="block w-full rounded-md border-0 py-1.5 pl-3 outline-none text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 font-medium"
-                  required
-                />
-              </div>
-            </div>
-            <div className="sm:col-span-1">
               <label className="block text-sm font-medium leading-6 text-gray-900">
                 Instagram
               </label>
@@ -217,7 +133,7 @@ function Settings() {
                 />
               </div>
             </div>
-            <div className="sm:col-span-1">
+            <div className="sm:col-span-3">
               <label
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
@@ -237,7 +153,7 @@ function Settings() {
                 />
               </div>
             </div>
-            <div className="sm:col-span-1">
+            <div className="sm:col-span-3">
               <label
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
@@ -257,7 +173,7 @@ function Settings() {
                 />
               </div>
             </div>
-            <div className="sm:col-span-1">
+            <div className="sm:col-span-3">
               <label
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
@@ -277,7 +193,7 @@ function Settings() {
                 />
               </div>
             </div>
-            <div className="sm:col-span-2 flex justify-end items-end">
+            <div className="sm:col-span-2 flex justify-start items-center">
               <button
                 type="button"
                 // onClick={handleCancel}

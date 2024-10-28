@@ -20,11 +20,10 @@ function BannerProjects() {
             <div className="mx-auto absolute bottom-[70px] h-auto md:left-[10%] px-4 md:px-0">
               <div className="w-full h-full">
                 <div className="md:text-[70px] text-[50px] font-medium text-white tracking-[5px] leading-[6rem] overflow-hidden">
-                  PROJECTS
+                  PROJETOS
                 </div>
                 <p className="text-[20px] text-white opacity-90 mt-5 w-full">
-                  Explore our project gallery and discover how we turn visions
-                  into reality.
+                Veja mais sobre meus projetos e conheça como eles foram desenvolvidos e apresentados.
                 </p>
               </div>
             </div>

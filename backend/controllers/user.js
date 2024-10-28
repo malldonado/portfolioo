@@ -8,10 +8,6 @@ exports.updateUserData = async (req, res) => {
       firstName,
       lastName,
       phone,
-      streetAddress,
-      postalCode,
-      city,
-      region,
       instagram,
       linkedin,
       github,
@@ -29,10 +25,6 @@ exports.updateUserData = async (req, res) => {
     existingUser.firstName = firstName;
     existingUser.lastName = lastName;
     existingUser.phone = phone;
-    existingUser.streetAddress = streetAddress;
-    existingUser.postalCode = postalCode;
-    existingUser.city = city;
-    existingUser.region = region;
     existingUser.instagram = instagram;
     existingUser.linkedin = linkedin;
     existingUser.github = github;
@@ -55,10 +47,6 @@ exports.createUserData = async (req, res) => {
       firstName,
       lastName,
       phone,
-      streetAddress,
-      postalCode,
-      city,
-      region,
       instagram,
       linkedin,
       github,
@@ -71,10 +59,6 @@ exports.createUserData = async (req, res) => {
       firstName,
       lastName,
       phone,
-      streetAddress,
-      postalCode,
-      city,
-      region,
       instagram,
       linkedin,
       github,

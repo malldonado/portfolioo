@@ -21,7 +21,7 @@ function Sidebar() {
                       className={
                         location.pathname === item.route
                           ? "inline-flex items-center px-4 py-3 my-1 text-white bg-[#000] rounded-lg active w-full dark:bg-blue-600"
-                          : "inline-flex items-center px-4 py-3 my-1 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                          : "inline-flex items-center px-4 py-3 my-1 rounded-lg hover:text-white bg-gray-400 hover:bg-black w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
                       }
                     >
                       {item.emoji}

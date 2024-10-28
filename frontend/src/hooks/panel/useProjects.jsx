@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Image1 from "../../images/banner.jpg";
-import Image2 from "../../images/banner.jpg";
+import Image1 from "../../images/project1.png";
+import Image2 from "../../images/project2.png";
 
 function useProjects() {
   const [showDropdown, setShowDropdown] = useState(false);
