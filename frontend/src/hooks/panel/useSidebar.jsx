@@ -24,13 +24,13 @@ function useSidebar() {
           id: 1,
           label: "Projeto",
           route: "/project-panel",
-          emoji: <FaFileAlt className="w-5 h-5 text-white mr-2" />,
+          emoji: <FaFileAlt className="w-5 h-5 text-black mr-2" />,
         },
         {
           id: 2,
           label: "Voltar",
           route: "/projects-panel",
-          emoji: <IoArrowBackSharp className="w-5 h-5 text-white mr-2" />,
+          emoji: <IoArrowBackSharp className="w-5 h-5 text-black mr-2" />,
         },
       ]
     : [
@@ -38,31 +38,31 @@ function useSidebar() {
           id: 1,
           label: "Postes",
           route: "/panel",
-          emoji: <HiMiniWallet className="w-5 h-5 text-white mr-2" />,
+          emoji: <HiMiniWallet className="w-5 h-5 text-black mr-2" />,
         },
         {
           id: 2,
           label: "Projetos",
           route: "/projects-panel",
-          emoji: <HiMiniSquare3Stack3D className="w-5 h-5 text-white mr-2" />,
+          emoji: <HiMiniSquare3Stack3D className="w-5 h-5 text-black mr-2" />,
         },
         {
           id: 3,
           label: "Sobre",
           route: "/about-panel",
-          emoji: <IoBusiness className="w-5 h-5 text-white mr-2" />,
+          emoji: <IoBusiness className="w-5 h-5 text-black mr-2" />,
         },
         {
           id: 4,
           label: "Mensagem",
           route: "/message-panel",
-          emoji: <RiMessageFill className="w-5 h-5 text-white mr-2" />,
+          emoji: <RiMessageFill className="w-5 h-5 text-black mr-2" />,
         },
         {
           id: 5,
           label: "Configurações",
           route: "/settings-panel",
-          emoji: <IoMdSettings className="w-5 h-5 text-white mr-2" />,
+          emoji: <IoMdSettings className="w-5 h-5 text-black mr-2" />,
         },
       ];
   return {

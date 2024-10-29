@@ -26,7 +26,7 @@ function ProjectsPage() {
         <Navbar />
         <BannerProjects />
         <EveryProjects />
-        <Pagination />
+        {/* <Pagination /> */}
         <Footer />
       </div>
     </div>

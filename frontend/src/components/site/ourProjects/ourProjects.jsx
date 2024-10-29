@@ -42,7 +42,7 @@ function OurProjects() {
       )}
       <div className="w-full flex justify-center">
         <Link
-          to={"/projects"}
+          to={"/projetos"}
           className="h-[50px] w-[160px] text-white bg-[#af9155] mt-10 cursor-pointer justify-center items-center flex hover:bg-[#7d5e21] transition duration-150 ease-in-out"
         >
           Ver mais

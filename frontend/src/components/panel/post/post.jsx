@@ -66,7 +66,7 @@ function Post() {
           <div key={item._id} className="flex w-full mt-6 mx-auto">
             <div className="w-full">
               {item.title && (
-                <h1 className="text-black text-md z-10 mb-3">{item.title}</h1>
+                <h1 className="text-black xl:text-md z-10 mb-3 text-[14px]">{item.title}</h1>
               )}
               <div className="w-full h-[200px] relative">
                 <IoCloseSharp

@@ -42,25 +42,42 @@ const cards = [
   Card18,
 ];
 
-function useServices() {
+function useSkills() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const slidesPerPageMobile = 6;
+  const slidesPerPageDesktop = 9;
+
+  const properties = {
+    duration: 5000,
+    transitionDuration: 1000,
+    infinite: true,
+    indicators: false,
+    onChange: (oldIndex, newIndex) => {
+      console.log(`Slide transitioned from ${oldIndex} to ${newIndex}`);
+    },
+  };
 
   const zoomInProperties = {
     scale: 1.4,
     duration: 5000,
   };
+  
 
   const handleSlideChange = (previousIndex, nextIndex) => {
     setCurrentIndex(nextIndex);
   };
   return {
     currentIndex,
-    cards,
     isMobile,
     zoomInProperties,
     handleSlideChange,
+    cards,
+    slidesPerPageMobile,
+    slidesPerPageDesktop,
+    properties
   };
 }
 
-export default useServices;
+export default useSkills;

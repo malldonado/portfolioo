@@ -1,6 +1,5 @@
 import React from "react";
-// import Project1 from "../../../images/project2.png";
-// import Project2 from "../../../images/project1.png";
+import About from "../../../images/about.jpg";
 import { Link } from "react-router-dom";
 
 function CardOne() {
@@ -16,21 +15,14 @@ function CardOne() {
       </div>
       <Link
         to={"/about"}
-        className="md:w-[50%] md:flex md:justify-start items-center ml-3 relative w-full"
+        className="md:w-[50%] md:flex md:justify-start items-center ml-3 relative w-full overflow-hidden"
       >
         <div className="cursor-pointer md:px-0 px-4">
-          {/* <img
-            className="md:h-[450px] md:w-[350px] h-[450px] object-cover w-full md:object-none"
-            src={Project1}
+          <img
+            className="md:w-full md:h-full w-full h-auto"
+            src={About}
             alt=""
-          /> */}
-        </div>
-        <div className="md:absolute md:bottom-[20px] md:left-[130px] cursor-pointer md:px-0 px-4 mt-4 md:mt-0">
-          {/* <img
-            className="md:h-[400px] md:w-[320px] h-[450px] object-cover w-full md:object-none"
-            src={Project2}
-            alt=""
-          /> */}
+          />
         </div>
       </Link>
     </div>

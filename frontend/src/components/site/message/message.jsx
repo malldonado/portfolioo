@@ -6,7 +6,7 @@ function Message() {
     useMessage();
 
   return (
-    <div className="max-w-[1010px] md:flex md:justify-center md:items-top text-white mx-auto md:mt-[200px] px-4 md:px-0">
+    <div className="max-w-[1010px] md:flex md:justify-center md:items-top text-white mx-auto md:mt-[200px] px-4 md:px-0 mt-[20px]">
       <div className="md:w-[55%] md:pr-5 md:ml-4 xl:ml-0">
         <span className="text-center md:text-[50px] text-[40px] leading-tight mb-4">
             SINTA-SE À VONTADE

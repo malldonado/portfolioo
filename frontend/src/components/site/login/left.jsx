@@ -2,7 +2,7 @@ import Banner from "../../../images/banner.svg";
 
 function Left() {
   return (
-    <div className="md:w-[60%] hidden md:block">
+    <div className="md:w-[60%] hidden lg:block">
       <div className="w-[100%] h-full bg-black flex justify-center items-center">
         <div className="flex flex-col items-center justify-center">
           <img src={Banner} className="h-auto my-auto mr-20 w-[450px]" alt="" />

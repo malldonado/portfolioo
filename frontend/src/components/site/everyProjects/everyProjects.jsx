@@ -9,8 +9,8 @@ function everyProjects() {
         to={"/projeto"}
         className="md:flex md:justify-between cursor-pointer md:items-center mt-10 w-full"
       >
-        <div className="md:w-[50%] md:mr-[30px]">
-          <img className="h-[270px] w-full" src={Image} alt="" />
+        <div className="md:w-[50%] md:mr-[30px] mt-10 md:mt-0">
+          <img className="h-[250px] w-full" src={Image} alt="" />
         </div>
         <div className="text-white md:w-[50%] md:ml-[30px] mt-5 md:mt-0">
           <span className="text-3xl">
@@ -33,7 +33,7 @@ function everyProjects() {
         className="md:flex md:justify-between cursor-pointer md:items-center mt-10 w-full"
       >
         <div className="md:w-[50%] md:mr-[30px]">
-          <img className="h-[270px] w-full" src={Image2} alt="" />
+          <img className="h-[250px] w-full" src={Image2} alt="" />
         </div>
         <div className="text-white md:w-[50%] md:ml-[30px] mt-5 md:mt-0">
           <span className="text-3xl">

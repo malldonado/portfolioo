@@ -13,7 +13,7 @@ function Right() {
         <Link className="overflow-hidden" to="/">
           <span className="text-black text-4xl">malldonado</span>
         </Link>
-        <div className="mt-10 2xl:w-[60%] px-4 md:px-0 w-[50%] overflow-hidden">
+        <div className="mt-10 2xl:w-[60%] px-4 md:px-0 w-[80%] overflow-hidden">
           <h2 className="text-[26px] font-bold nunito-font">Login</h2>
           <p className="nunito-font text-[14px] mt-4 text-gray-500">
             Entre com os dados que você forneceu durante o seu cadastro.
