@@ -10,7 +10,7 @@ function CardOne() {
           VEJA MAIS <br /> SOBRE MIM
         </span>
         <span className="text-white block mt-4 max-w-[500px] md:text-[20px] opacity-70">
-        Sou graduado em Análise e Desenvolvimento de Sistemas pela fatec de americana e estou aprimorando meu inglês na Influx. Minha experiência abrange o desenvolvimento front-end em um projeto de tcc focado na adoção de animais, além de atuar como desenvolvedor full stack na Performa.ai, onde integrei lojas virtuais em diversas plataformas de e-commerce. Atualmente, trabalho na Junco Móveis na área de infraestrutura.
+        Sou graduado em Análise e Desenvolvimento de Sistemas pela fatec de americana e estou aprimorando meu inglês na Influx. Minha experiência abrange o desenvolvimento front-end em um projeto de tcc focado na adoção de animais, além de atuar como desenvolvedor full stack na Performa.ai, onde integrei lojas virtuais em diversas plataformas de e-commerce. Atualmente, trabalho na Móveis Junco na área de infraestrutura.
         </span>
       </div>
       <Link

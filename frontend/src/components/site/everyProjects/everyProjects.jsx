@@ -30,14 +30,14 @@ function everyProjects() {
       </Link>
       <Link
         to={"/projeto"}
-        className="md:flex md:justify-between cursor-pointer md:items-center mt-10 w-full"
+        className="md:flex md:justify-between cursor-pointer md:items-center m-5 w-full"
       >
         <div className="md:w-[50%] md:mr-[30px]">
           <img className="h-[250px] w-full" src={Image2} alt="" />
         </div>
         <div className="text-white md:w-[50%] md:ml-[30px] mt-5 md:mt-0">
           <span className="text-3xl">
-            Admmiz Engenharia Civil ERP
+            Promoplace
           </span>
           <p className="mt-2">
             Admmiz é um sistema de gerenciamento de estoque que abrange a gestão

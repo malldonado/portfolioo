@@ -10,7 +10,7 @@ function useProject() {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get("http://localhost:8000/panel-post");
+          const response = await axios.get("http://localhost:8000/project/post");
           const { title, description } = response.data;
           setTitle(title);
           setDescription(description);
@@ -44,23 +44,24 @@ function useProject() {
         formData.append("title", title);
         formData.append("description", description);
         files.forEach((file) => formData.append("file", file));
-  
-        const response = await axios.post(
-          "http://localhost:8000/panel-post",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
-        console.log("Response:", response.data);
-        setStatus("success");
+        
+        const response = await axios.post("http://localhost:8000/project/post", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
+        
+        const project = response.data;
+        console.log("Projeto salvo:", project);
+        
+        // Suponha que `project.images` é o array de caminhos das imagens
+        setProjectImages(project.images); // `setProjectImages` é um estado para exibir as imagens
       } catch (error) {
-        console.error("Error submitting data:", error);
+        console.error("Erro ao enviar dados:", error);
         setStatus("error");
       }
     };
+    
     return {
       title,
       description,

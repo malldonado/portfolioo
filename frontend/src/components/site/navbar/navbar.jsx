@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
-import LogoIndex from "../../../images/logo.svg";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

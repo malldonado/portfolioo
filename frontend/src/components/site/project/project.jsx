@@ -1,22 +1,26 @@
+// components/Slideshow.js
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import Image1 from "../../../images/image.jpg";
+import useProject from "../../../hooks/site/useProject";
 
-function Slideshow() {
-  const images = [Image1, Image1, Image1];
+const Slideshow = ({ projectId }) => {
+  const { imageSrc, error } = useProject(projectId);
 
   return (
     <div className="w-full h-[100vh] mt-10 max-w-5xl mx-auto overflow-hidden">
       <div className="slide-container">
         <Slide>
-          {images.map((image, index) => (
-            <div key={index} className="each-slide">
+          {error && <p>Error: {error}</p>}
+          {imageSrc ? (
+            <div className="each-slide">
               <div className="flex items-center justify-center h-[600px]">
-                <img className="object-cover w-full h-[600px]" src={image} alt="" />
+                <img className="object-cover w-full h-[600px]" src={imageSrc} alt="Project" />
               </div>
             </div>
-          ))}
+          ) : (
+            <p>Loading image...</p>
+          )}
         </Slide>
       </div>
       <div className="text-white mt-8">
@@ -29,6 +33,6 @@ function Slideshow() {
       </div>
     </div>
   );
-}
+};
 
 export default Slideshow;
