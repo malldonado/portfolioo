@@ -1,58 +1,48 @@
-import Image from "../../../images/project1.png";
-import Image2 from "../../../images/project2.png";
 import { Link } from "react-router-dom";
+import useEveryProjects from "../../../hooks/site/useEveryProjects";
 
-function everyProjects() {
+function EveryProjects() {
+  const { projects, isLoading, error } = useEveryProjects();
+
+  if (isLoading) {
+    return <div className="text-white">Carregando projetos...</div>;
+  }
+
+  if (error) {
+    return <div className="text-red-500">{error}</div>;
+  }
+
   return (
     <div className="max-w-[1000px] mx-auto mt-14 px-4 md:px-0">
-      <Link
-        to={"/projeto"}
-        className="md:flex md:justify-between cursor-pointer md:items-center mt-10 w-full"
-      >
-        <div className="md:w-[50%] md:mr-[30px] mt-10 md:mt-0">
-          <img className="h-[250px] w-full" src={Image} alt="" />
-        </div>
-        <div className="text-white md:w-[50%] md:ml-[30px] mt-5 md:mt-0">
-          <span className="text-3xl">
-            Admmiz Engenharia Civil ERP
-          </span>
-          <p className="mt-2">
-            Admmiz é um sistema de gerenciamento de estoque que abrange a gestão
-            de fornecedores, clientes, unidades, categorias, produtos, compras,
-            faturas e estoque. O frontend é desenvolvido com ReactJS, Next.js e
-            TailwindCSS, utilizando TypeScript para garantir segurança e
-            escalabilidade...
-          </p>
-          <Link className="h-[40px] w-[100px] text-[14px] text-white bg-[#af9155] mt-6 cursor-pointer justify-center items-center flex">
-            Ver mais
-          </Link>
-        </div>
-      </Link>
-      <Link
-        to={"/projeto"}
-        className="md:flex md:justify-between cursor-pointer md:items-center m-5 w-full"
-      >
-        <div className="md:w-[50%] md:mr-[30px]">
-          <img className="h-[250px] w-full" src={Image2} alt="" />
-        </div>
-        <div className="text-white md:w-[50%] md:ml-[30px] mt-5 md:mt-0">
-          <span className="text-3xl">
-            Promoplace
-          </span>
-          <p className="mt-2">
-            Admmiz é um sistema de gerenciamento de estoque que abrange a gestão
-            de fornecedores, clientes, unidades, categorias, produtos, compras,
-            faturas e estoque. O frontend é desenvolvido com ReactJS, Next.js e
-            TailwindCSS, utilizando TypeScript para garantir segurança e
-            escalabilidade...
-          </p>
-          <Link className="h-[40px] w-[100px] text-[14px] text-white bg-[#af9155] mt-6 cursor-pointer justify-center items-center flex">
-            Ver mais
-          </Link>
-        </div>
-      </Link>
+      {projects.map((project) => (
+        <Link
+          key={project.id}
+          to={`/projeto/${project.id}`}
+          className="md:flex md:justify-between cursor-pointer md:items-center mt-10 w-full"
+        >
+          <div className="md:w-[50%] md:mr-[30px] mt-10 md:mt-0">
+            {project.image && (
+              <img
+                className="h-[250px] w-full"
+                src={project.image}
+                alt={project.title}
+              />
+            )}
+          </div>
+          <div className="text-white md:w-[50%] md:ml-[30px] mt-5 md:mt-0">
+            <h2 className="text-3xl overflow-hidden">{project.title}</h2>
+            <p className="mt-2">{project.description}</p>
+            <Link
+              to={`/projeto/${project.id}`}
+              className="h-[40px] w-[100px] text-[14px] text-white bg-[#af9155] mt-6 cursor-pointer flex justify-center items-center"
+            >
+              Ver mais
+            </Link>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 }
 
-export default everyProjects;
+export default EveryProjects;

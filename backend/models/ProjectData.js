@@ -9,7 +9,7 @@ const projectSchema = mongoose.Schema(
       type: String,
       required: [false],
     },
-    images: [{ data: Buffer, contentType: String }]
+    images: [String]
   },
   {
     timestamp: true,

@@ -1,28 +1,21 @@
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
+const uploadDir = 'uploads/';
 
-// Configuração do armazenamento em disco
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir);
+}
+
 const storage = multer.diskStorage({
+
   destination: (req, file, cb) => {
-    cb(null, './uploads/');
+    cb(null, uploadDir);
   },
   filename: (req, file, cb) => {
-    const uniqueSuffix = `${Date.now()}-${file.originalname}`;
-    cb(null, uniqueSuffix);
+    cb(null, Date.now() + path.extname(file.originalname)); // Nome único para evitar conflitos
   },
 });
 
-// Filtro de tipo de arquivo
-const fileFilter = (req, file, cb) => {
-  const isImage = file.mimetype.startsWith('image/');
-  cb(isImage ? null : new Error('File type not supported!'), isImage);
-};
-
-// Inicialização do multer com armazenamento e filtro
-const upload = multer({ 
-  storage, 
-  fileFilter 
-});
-
-// Exporta o middleware de upload
+const upload = multer({ storage: storage });
 module.exports = upload;

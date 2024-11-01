@@ -7,7 +7,7 @@ function Container() {
   const { loading, renderPanel } = useContainer();
 
   return (
-    <div className="md:w-[80%] w-full">
+    <div className="md:w-[85%] w-full">
       <div className="flex mt-[13px] w-full">
         <div className="w-full h-full">
             <div className={`flex justify-center items-center h-[350px] w-full overflow-hidden ${loading ? '' : 'hidden'}`}>

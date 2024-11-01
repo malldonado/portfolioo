@@ -10,10 +10,10 @@ function Sidebar() {
   return (
     <>
       {!isMobile ? (
-        <div className="p-6 h-full w-[20%] mt-2">
+        <div className="p-6 h-full w-[25%] mt-2">
           <div className="max-w-[300px] h-full rounded-[10px] border-[1px] bg-white panel-cards">
             <div className="md:flex">
-              <ul className="flex-column space-y space-y-1 text-sm font-medium text-black md:me-4 mb-4 md:mb-0 w-full mx-4 mt-5">
+              <ul className="flex-column space-y space-y-1 text-sm font-medium text-white md:me-4 mb-4 md:mb-0 w-full mx-4 mt-5">
                 {items.map((item) => (
                   <li key={item.id}>
                     <NavLink

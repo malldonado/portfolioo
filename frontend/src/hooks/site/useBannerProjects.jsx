@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "react-slideshow-image/dist/styles.css";
 
-function BannerProjects() {
+function useBannerProjects() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -15,4 +15,4 @@ function BannerProjects() {
   return { data };
 }
 
-export default BannerProjects;
+export default useBannerProjects;

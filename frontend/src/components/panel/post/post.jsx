@@ -16,7 +16,7 @@ function Post() {
   return (
     <div className="block w-full">
       <form
-        className="md:w-4/5 w-[90%] mt-6 mx-auto flex-col flex gap-y-5"
+        className="md:w-full w-[90%] mt-6 mx-auto flex-col flex gap-y-5"
         onSubmit={handleSubmit}
       >
         <div className="sm:col-span-6 mt-1">
@@ -61,7 +61,7 @@ function Post() {
           </div>
         )}
       </form>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:w-4/5 w-[90%] mt-6 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:w-full w-[90%] mt-6 mx-auto">
         {info.map((item) => (
           <div key={item._id} className="flex w-full mt-6 mx-auto">
             <div className="w-full">

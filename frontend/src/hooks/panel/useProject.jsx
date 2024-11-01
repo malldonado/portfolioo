@@ -43,7 +43,9 @@ function useProject() {
         const formData = new FormData();
         formData.append("title", title);
         formData.append("description", description);
-        files.forEach((file) => formData.append("file", file));
+        files.forEach((file) => formData.append('images', file)); 
+        console.log(formData)
+        console.log(files)
         
         const response = await axios.post("http://localhost:8000/project/post", formData, {
           headers: {
@@ -53,9 +55,6 @@ function useProject() {
         
         const project = response.data;
         console.log("Projeto salvo:", project);
-        
-        // Suponha que `project.images` é o array de caminhos das imagens
-        setProjectImages(project.images); // `setProjectImages` é um estado para exibir as imagens
       } catch (error) {
         console.error("Erro ao enviar dados:", error);
         setStatus("error");
