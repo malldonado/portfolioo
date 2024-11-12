@@ -27,7 +27,7 @@ function App() {
           <Route path="/index" element={<Index />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sobre" element={<About />} />
-          <Route path="/projeto" element={<Project />} />
+          <Route path="/projeto/:id" element={<Project />} />
           <Route path="/projetos" element={<Projects />} />
           <Route path="/panel" element={<PostsPanel />} />
           <Route path="/settings-panel" element={<SettingsPanel />} />

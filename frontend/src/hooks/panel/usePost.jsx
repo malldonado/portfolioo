@@ -16,7 +16,7 @@ function usePost() {
 
   const deleteProject = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/posts/${id}`);
+      await axios.delete(`https://malldonado-backend.vercel.app/posts/${id}`);
       setInfo(info.filter((project) => project._id !== id));
       setStatus({ type: "success", message: "Data deleted successfully!" });
     } catch (error) {
@@ -35,7 +35,7 @@ function usePost() {
     formDataObj.append("file", formData.file);
 
     try {
-      await axios.post("http://localhost:8000/posts", formDataObj, {
+      await axios.post("https://malldonado-backend.vercel.app/posts", formDataObj, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -45,7 +45,7 @@ function usePost() {
         type: "success",
         message: "Information updated successfully!",
       });
-      const response = await axios.get("http://localhost:8000/posts");
+      const response = await axios.get("https://malldonado-backend.vercel.app/posts");
       setInfo(response.data.data);
     } catch (error) {
       console.error("Error sending data:", error);
@@ -59,7 +59,7 @@ function usePost() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/posts");
+        const response = await axios.get("https://malldonado-backend.vercel.app/posts");
         setInfo(response.data.data);
       } catch (error) {
         console.error("Error fetching posts:", error);
@@ -80,7 +80,7 @@ function usePost() {
       setInfo(updatedInfo);
 
       const response = await axios.post(
-        `http://localhost:8000/posts/${itemId}/favorite`,
+        `https://malldonado-backend.vercel.app/posts/${itemId}/favorite`,
         {
           favorited: !isFavorited,
         }

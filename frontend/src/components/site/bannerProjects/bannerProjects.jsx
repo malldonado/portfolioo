@@ -13,7 +13,7 @@ function BannerProjects() {
             {item.image && (
               <img
                 className="z-[-1] relative object-cover h-[300px] w-full"
-                src={`http://localhost:8000/uploads/${item.image}`}
+                src={`https://malldonado-backend.vercel.app/uploads/${item.image}`}
                 alt="Banner Image"
               />
             )}

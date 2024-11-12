@@ -7,7 +7,7 @@ function useBannerProjects() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:8000/posts/favorite");
+      const response = await axios.get("https://malldonado-backend.vercel.app/posts/favorite");
       setData(response.data.data || []);
     };
     fetchData();

@@ -6,7 +6,7 @@ function useBanner() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/about/latest")
+      .get("https://malldonado-backend.vercel.app/about/latest")
       .then((response) => {
         setAboutData(response.data);
       })

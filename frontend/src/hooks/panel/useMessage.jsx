@@ -12,7 +12,7 @@ function useMessage() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/contact");
+      const response = await axios.get("https://malldonado-backend.vercel.app/contact");
       setProjectsData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -21,7 +21,7 @@ function useMessage() {
 
   const deleteProject = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/contact/${id}`);
+      await axios.delete(`https://malldonado-backend.vercel.app/contact/${id}`);
       setProjectsData(projectsData.filter((project) => project._id !== id));
     } catch (error) {
       console.error("Error deleting data:", error);

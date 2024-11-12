@@ -16,7 +16,7 @@ function useBanner() {
   // Função para buscar dados do banner
   const fetchBannerData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/posts");
+      const response = await axios.get("https://malldonado-backend.vercel.app/posts");
       setData(response.data.data || []);
     } catch (err) {
       setError(err);
@@ -28,7 +28,7 @@ function useBanner() {
   // Função para buscar dados de redes sociais
   const fetchSocialMediaData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/user-update");
+      const response = await axios.get("https://malldonado-backend.vercel.app/user-update");
       const socialMediaData = response.data;
       setFormData({
         instagram: socialMediaData.instagram,

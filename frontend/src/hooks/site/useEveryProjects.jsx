@@ -12,12 +12,12 @@ function useEveryProjects() {
       setError(null);
 
       try {
-        const response = await axios.get("http://localhost:8000/project/post/all");
+        const response = await axios.get("https://malldonado-backend.vercel.app/project/post/all");
         const projectsData = response.data.data.map((project) => ({
           id: project._id,
           title: project.title,
           description: project.description,
-          image: project.images?.[0] ? `http://localhost:8000/uploads/${project.images[0]}` : null
+          image: project.images?.[0] ? `https://malldonado-backend.vercel.app/uploads/${project.images[0]}` : null
         }));
         setProjects(projectsData);
       } catch (error) {

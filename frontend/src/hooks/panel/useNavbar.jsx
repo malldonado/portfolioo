@@ -8,7 +8,7 @@ function useNavbar() {
   // Função para buscar informações do usuário, memoizada com useCallback
   const fetchUserInfo = useCallback(async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/user-update");
+      const { data } = await axios.get("https://malldonado-backend.vercel.app/user-update");
       setUserFirstName(data.firstName);
     } catch (error) {
       console.error("Erro ao buscar informações do usuário:", error);

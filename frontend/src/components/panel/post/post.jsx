@@ -83,7 +83,7 @@ function Post() {
                 {item.image && (
                   <img
                     className="relative w-full md:h-full h-full object-cover hover:opacity-65 cursor-pointer"
-                    src={`http://localhost:8000/uploads/${item.image}`}
+                    src={`https://malldonado-backend.vercel.app/uploads/${item.image}`}
                     alt=""
                   />
                 )}

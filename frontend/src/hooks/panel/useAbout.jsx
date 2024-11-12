@@ -10,7 +10,7 @@ function useAbout() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/about/latest");
+        const response = await axios.get("https://malldonado-backend.vercel.app/about/latest");
         const { title, text } = response.data;
         setTitle(title);
         setText(text);
@@ -54,7 +54,7 @@ function useAbout() {
   };
   
   const submitFormData = async (formData) => {
-    const response = await axios.put("http://localhost:8000/about", formData, {
+    const response = await axios.put("https://malldonado-backend.vercel.app/about", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

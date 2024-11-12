@@ -7,7 +7,7 @@ function useFooter() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/user-update");
+        const response = await axios.get("https://malldonado-backend.vercel.app/user-update");
         setFormData(response.data);
       } catch (error) {
         console.error(error);

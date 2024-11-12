@@ -8,7 +8,7 @@ function Banner() {
         aboutData.file && (
           <img
             className="md:h-[400px] md:w-[400px] object-cover md:mr-10 w-full h-full"
-            src={`http://localhost:8000/uploads/${aboutData.file}`}
+            src={`https://malldonado-backend.vercel.app/uploads/${aboutData.file}`}
             alt=""
           />
         )}

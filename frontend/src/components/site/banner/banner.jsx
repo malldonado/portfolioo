@@ -34,14 +34,14 @@ function Banner() {
                 <div className="each-slide" key={index}>
                   <div className="flex items-center justify-center bg-cover bg-center h-[600px] overflow-hidden relative">
                     {item.title && (
-                      <h1 className="text-white font-bold text-4xl md:text-7xl absolute bottom-6 left-10 overflow-hidden md:h-[100px] drop-shadow-2xl">
+                      <h1 className="text-white font-bold text-4xl md:text-6xl absolute bottom-6 left-10 overflow-hidden md:h-[100px] drop-shadow-2xl">
                         {item.title}
                       </h1>
                     )}
                     {item.image && (
                       <img
                         className="z-[-1] relative object-cover w-full md:h-full h-full opacity-80"
-                        src={`http://localhost:8000/uploads/${item.image}`}
+                        src={`https://malldonado-backend.vercel.app/uploads/${item.image}`}
                         alt={item.title || "Banner Image"}
                       />
                     )}

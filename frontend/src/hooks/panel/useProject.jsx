@@ -10,7 +10,7 @@ function useProject() {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get("http://localhost:8000/project/post");
+          const response = await axios.get("https://malldonado-backend.vercel.app/project/post");
           const { title, description } = response.data;
           setTitle(title);
           setDescription(description);
@@ -47,7 +47,7 @@ function useProject() {
         console.log(formData)
         console.log(files)
         
-        const response = await axios.post("http://localhost:8000/project/post", formData, {
+        const response = await axios.post("https://malldonado-backend.vercel.app/project/post", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

@@ -13,7 +13,7 @@ function EveryProjects() {
   }
 
   return (
-    <div className="max-w-[1000px] mx-auto mt-14 px-4 md:px-0">
+    <div className="max-w-[1000px] mx-auto mt-6 md:mt-14 px-4 md:px-0">
       {projects.map((project) => (
         <Link
           key={project.id}

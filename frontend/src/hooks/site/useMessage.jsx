@@ -21,7 +21,7 @@ function useMessage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/contact", formData);
+      await axios.post("https://malldonado-backend.vercel.app/contact", formData);
       console.log("Form data submitted successfully");
       setSuccess(true);
       setFormData({name: ''});
